@@ -55,3 +55,12 @@ Three state-of-the-art CNN architectures were evaluated on a benchmark dataset o
 ### 3. Case Insensitivity in Match Matching
 * **Challenge:** Pet labels matching was failing because filenames had uppercase letters and spaces, whereas classifier outputs contained comma-separated lowercase strings.
 * **Solution:** Used `.lower().strip()` normalization on both pet labels and classifier output items before checking matching strings.
+
+---
+
+## 📚 References
+
+* [Udacity AI Programming with Python Nanodegree](https://www.udacity.com/course/ai-programming-with-python-nanodegree--nd089) - Course material, starter code guidelines, and image datasets.
+* [PyTorch TorchVision Models Documentation](https://pytorch.org/vision/stable/models.html) - Pre-trained CNN models (AlexNet, ResNet18, and VGG16) reference.
+* [Python argparse Documentation](https://docs.python.org/3/library/argparse.html) - Command-line interface setup guidance.
+* [Python Built-in Exceptions (ZeroDivisionError)](https://docs.python.org/3/library/exceptions.html#ZeroDivisionError) - Python error-handling and safe arithmetic guidelines.
