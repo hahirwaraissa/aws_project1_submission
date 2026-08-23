@@ -1,0 +1,28 @@
+Questions regarding Uploaded Image Classification:
+
+1. Did the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed? If not, report the differences in the classifications.
+
+Answer: Yes. All three model architectures (ResNet, AlexNet, and VGG) classified the breed of dog in Dog_01.jpg to be the same breed: golden retriever.
+
+
+2. Did each of the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed of dog as that model architecture classified Dog_02.jpg? If not, report the differences in the classifications.
+
+Answer: Yes. Each of the three model architectures classified Dog_02.jpg (the horizontally flipped version of Dog_01.jpg) as a golden retriever, which matches their classification of Dog_01.jpg. The horizontal flip did not affect the classification for any of the models.
+
+
+3. Did the three model architectures correctly classify Animal_Name_01.jpg and Object_Name_01.jpg to not be dogs? If not, report the misclassifications.
+
+Answer: Yes, all three model architectures correctly classified both Animal_Name_01.jpg (Frog_01.jpg) and Object_Name_01.jpg (Coffee_mug_01.jpg) as not being dogs (they correctly set PetLabelDog: 0 and ClassLabelDog: 0 for these images).
+In terms of classifications:
+- ResNet classified Coffee_mug_01.jpg as "coffee mug" (Not-dog) and Frog_01.jpg as "tree frog, tree-frog" (Not-dog).
+- AlexNet classified Coffee_mug_01.jpg as "cup" (Not-dog) and Frog_01.jpg as "tree frog, tree-frog" (Not-dog).
+- VGG classified Coffee_mug_01.jpg as "coffee mug" (Not-dog) and Frog_01.jpg as "tree frog, tree-frog" (Not-dog).
+
+
+4. Based upon your answers for questions 1. - 3. above, select the model architecture that you feel did the best at classifying the four uploaded images. Describe why you selected that model architecture as the best on uploaded image classification.
+
+Answer: Both ResNet and VGG performed the best on the uploaded images, with ResNet being preferred due to its execution speed.
+Why:
+1. Both ResNet and VGG achieved 100% classification rate for dogs vs. not-dogs, and they also correctly matched Coffee_mug_01.jpg to the exact label "coffee mug" (giving them a 25.0% exact label match rate).
+2. AlexNet performed slightly worse as it classified the coffee mug as "cup" instead of the exact label "coffee mug" (resulting in a 0.0% exact label match rate).
+3. Between ResNet and VGG, ResNet is much more computationally efficient and completed the run faster (1 second vs 2 seconds for VGG). Thus, ResNet is the best overall model.
